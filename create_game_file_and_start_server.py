@@ -65,7 +65,14 @@ def main(
     f.close()
 
     # Launch server
-    os.system("pioneers-server-console" + " -p " + str(port) + " --file " + output_file)
+    os.system(
+        "pioneers-server-console"
+        + " -p "
+        + str(port)
+        + " --file "
+        + output_file
+        + " --auto-quit --empty-timeout 3600 --debug"
+    )
 
 
 def update_line(original, new, param_name):
